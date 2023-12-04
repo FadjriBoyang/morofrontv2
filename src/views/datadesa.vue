@@ -11,10 +11,10 @@
                     <a href="#"> {{ text1 }}</a>
                 </li>
                 <li>
-                    <a href="#"> {{ text2 }}</a>
+                    <a href="/data-pendidikan"> {{ text2 }}</a>
                 </li>
                 <li>
-                    <a href="/data-pendidikan"> {{ text3 }}</a>
+                    <a href="#"> {{ text3 }}</a>
                 </li>
                 <li>
                     <a href="#"> {{ text4 }}</a>
@@ -48,7 +48,7 @@ export default {
         fetchData() {
             const apiResponse = {
                 data: {
-                    imageUrl: "src/assets/desa.png",
+                    imageUrl: "src/assets/img//desa.png",
                     text_pertama:
                         ["Halaman ini berisi tautan menuju informasi mengenai Basis Data Desa. Ada dua jenis data yang dimuat dalam sistem ini, yakni basis data kependudukan dan basis data sumber daya desa. Silahkan klik pada tautan berikut untuk mendapatkan tampilan data statistik per kategori :"],
                     text1: 'Data Wilayah Administratif ',
@@ -108,5 +108,10 @@ img {
 ol {
     text-decoration: underline;
     color: #003366;
+    font-size: 17px;
+}
+
+p{
+    font-size: 17px;
 }
 </style>

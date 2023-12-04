@@ -2,7 +2,7 @@
     <section>
         <div>
             <div class="p-5 text-center bg-hero mt-0 pb-10">
-                <h1 class="mb-3 text-white">Berita Desa</h1>
+                <h1 class="mb-3 text-white">ARTIKEL</h1>
                 <a class="btn btn-primary" href="" role="button">Media</a>
             </div>
         </div>
@@ -17,20 +17,20 @@
                     <div class="container mt-4">
                         <div class="row">
                             <div class="col-md-6">
-                                <!-- Gambar berita -->
-                                <img src="/src/assets/img//Artikel.png" alt="Gambar Berita" class="img-fluid">
+                                <!-- Gambar artikel -->
+                                <img src="~@/assets/img/Artikel.png" alt="Gambar artikel" class="img-fluid">
                             </div>
                             <div class="col-md-6">
                                 <div class="d-none d-md-block">
-                                    <h2 class="mb-2 warna-judul-berita">
+                                    <h2 class="mb-2 warna-judul-artikel">
                                         {{ item.judul_potensi }}
                                     </h2>
                                     <br>
                                 </div>
-                                <h5 class="mb-4 sub-berita">{{ item.sub_judul }}</h5>
-                                <h5 class="mb-4 item-berita">{{ item.date }}</h5>
+                                <h5 class="mb-4 sub-artikel">{{ item.sub_judul }}</h5>
+                                <h5 class="mb-4 item-artikel">{{ item.date }}</h5>
                                 <p class="mb-4">{{ item.deskripsi }}</p>
-                                <a href="/contentberita">
+                                <a href="/contentartikel">
                                     <button class="btn btn-secondary" @click="showDetail(item)">
                                         Lihat Selengkapnya
                                     </button></a>
@@ -148,7 +148,7 @@ export default {
                         deskripsi:
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales consequat dictum. Praesent fermentum blandit ipsum et ultricies. Nunc ultrices neque ac velit aliquet, in iaculis nisi pellentesque. Pengembangan pertanian organik di daerah dengan tanah subur.",
                         foto_potensi_desa: "gambar1.jpg",
-                        sub_judul: "Deskripsi tambahan untuk berita desa 1",
+                        sub_judul: "Deskripsi tambahan untuk artikel desa 1",
                     },
                     {
                         id_potensi: 2,
@@ -301,17 +301,17 @@ export default {
     border-radius: 10px;
 }
 
-.sub-berita {
+.sub-artikel {
     font-weight: bold;
 }
 
-.item-berita {
+.item-artikel {
     color: #003366;
     font-size: 18px;
     font-weight: bold;
 }
 
-.warna-judul-berita {
+.warna-judul-artikel {
     font-weight: bold;
     color: #003366 !important;
 }

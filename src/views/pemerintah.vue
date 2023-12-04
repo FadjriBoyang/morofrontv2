@@ -41,25 +41,23 @@
     <div class="container py-5">
         <div class="border rounded row align-items-center pt-3 pb-3 mb-4 with-shadow" :class="{ 'with-shadow': isHovered }"
             @mouseenter="addShadow" @mouseleave="removeShadow">
-            <div class="row">
-                <div class="col-md-12 order-md-1">
-                    <div class="text-center text-md-start">
-                        <h2 class="mb-3 d-md-none judul-artikel">
+            <div class="row mt-4 mb-4">
+                <div class="col-md-12 order-md-1 text-center">
+                    <h3 class="mb-3 d-md-none judul-artikel">
+                        {{ title_artikel }}
+                    </h3>
+                    <div class="d-none d-md-block text">
+                        <h3 class="mb-2 judul-artikel text-center">
                             {{ title_artikel }}
-                        </h2>
-                        <div class="d-none d-md-block">
-                            <h2 class="mb-2 judul-artikel">
-                                {{ title_artikel }}
-                            </h2>
-                        </div>
-                        <br>
-                        <h5 class="mb-4 subjudul-artikel">{{ subtitle_artikel }}</h5>
-                        <a href="/lembaga">
-                            <button class="btn btn-secondary" @click="showDetail(item)">
-                                Selengkapnya
-                            </button>
-                        </a>
+                        </h3>
                     </div>
+                    <br>
+                    <h5 class="mb-4 subjudul-artikel">{{ subtitle_artikel }}</h5>
+                    <a href="/lembaga">
+                        <button class="btn btn-secondary" @click="showDetail(item)">
+                            Selengkapnya
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -89,7 +87,7 @@ export default {
         fetchData() {
             const apiResponse = {
                 data: {
-                    imageUrl: "src/assets/kepdes1.png",
+                    imageUrl: "src/assets/img//kepdes1.png",
                     paragraphs: [
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In felis urna, vehicula ut felis non, venenatis lacinia urna. Nullam eget nibh ante. Phasellus sed mi id turpis luctus congue ut sed neque. Pellentesque quis pretium justo, convallis imperdiet felis. Proin porttitor tristique varius.",
                         "Integer non convallis dui, ac cursus neque. Curabitur facilisis scelerisque lacus quis bibendum. Mauris placerat dolor sem, sit amet vestibulum magna venenatis eu. Aliquam consectetur metus sapien, in gravida enim elementum id. Nulla et purus magna. Vestibulum porta vitae ipsum nec facilisis. Phasellus efficitur luctus enim vitae condimentum. Curabitur commodo purus ac mi luctus, vitae lobortis ante semper. Duis quam orci, rhoncus vitae ullamcorper quis, tincidunt non erat. Maecenas dui ante, eleifend gravida sagittis quis, congue vestibulum enim.",
@@ -183,5 +181,21 @@ export default {
     font-size: 14px;
     cursor: pointer;
     border-radius: 10px;
+    display: grid;
+    margin: auto;
+}
+
+.with-shadow {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: none;
+}
+
+.with-shadow:hover,
+.with-shadow.active {
+    box-shadow: 0 0 10px 0 rgba(0, 51, 102, 0.5);
+}
+
+.text-center{
+    margin-left: 3px;
 }
 </style>

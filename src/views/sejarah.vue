@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-md-6">
             <!-- Gambar Sejarah Desa -->
-            <img :src="imageUrl" alt="Desa Lamberea" class="img-fluid" />
+            <img v-bind:src="imageUrl" alt="Desa Lamberea" class="img-fluid" />
           </div>
           <div class="col-md-6">
             <!-- Judul Sejarah Desa -->
@@ -27,7 +27,7 @@
       <div class="row">
         <div v-for="(head, index) in kepalaDesa" :key="index" class="col-md-4 mb-4">
           <!-- Foto Kepala Desa -->
-          <img :src="head.imageUrl" :alt="head.name" class="img-fluid foto-kepdes" />
+          <img v-bind:src="head.imageUrl" :alt="head.name" class="img-fluid foto-kepdes" />
 
           <!-- Periode Tahun -->
           <div class="text-center mt-2">
@@ -53,19 +53,19 @@
       fetchData() {
         const apiResponse = {
           data: {
-            imageUrl: "src/assets/sdesa.png",
+            imageUrl: "src/assets/img//sdesa.png",
             title: "Desa Lamberea",
             paragraphs :[
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In felis urna, vehicula ut felis non, venenatis lacinia urna. Nullam eget nibh ante. Phasellus sed mi id turpis luctus congue ut sed neque. Pellentesque quis pretium justo, convallis imperdiet felis. Proin porttitor tristique varius.",
               "Integer non convallis dui, ac cursus neque. Curabitur facilisis scelerisque lacus quis bibendum. Mauris placerat dolor sem, sit amet vestibulum magna venenatis eu. Aliquam consectetur metus sapien, in gravida enim elementum id. Nulla et purus magna. Vestibulum porta vitae ipsum nec facilisis. Phasellus efficitur luctus enim vitae condimentum. Curabitur commodo purus ac mi luctus, vitae lobortis ante semper. Duis quam orci, rhoncus vitae ullamcorper quis, tincidunt non erat. Maecenas dui ante, eleifend gravida sagittis quis, congue vestibulum enim.",
               ],
               kepalaDesa: [
-                { imageUrl: 'src/assets/kepdes1.png', name: 'Nama Kepala Desa 1', periode: 'Tahun 20XX-20YY' },
-                { imageUrl: 'src/assets/kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
-                { imageUrl: 'src/assets/kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
-                { imageUrl: 'src/assets/kepdes1.png', name: 'Nama Kepala Desa 1', periode: 'Tahun 20XX-20YY' },
-                { imageUrl: 'src/assets/kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
-                { imageUrl: 'src/assets/kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
+                { imageUrl: 'src/assets/img//kepdes1.png', name: 'Nama Kepala Desa 1', periode: 'Tahun 20XX-20YY' },
+                { imageUrl: 'src/assets/img//kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
+                { imageUrl: 'src/assets/img//kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
+                { imageUrl: 'src/assets/img//kepdes1.png', name: 'Nama Kepala Desa 1', periode: 'Tahun 20XX-20YY' },
+                { imageUrl: 'src/assets/img//kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
+                { imageUrl: 'src/assets/img//kepdes1.png', name: 'Nama Kepala Desa 2', periode: 'Tahun 20YY-20ZZ' },
         // ... tambahkan kepala desa lainnya jika diperlukan
       ],
             },
@@ -101,6 +101,8 @@
     /* Set text color to white */
     .text-white {
       color: white;
+      font-weight: bold;
+      text-shadow: 2px 2px #252525;
     }
     .text-blue {
       color: #003366 !important;
